@@ -1,4 +1,4 @@
-# pregrad-project
+"Word Wars: Finding the Most Frequent Survivor!" 🚀
 This project identifies the most frequently occurring word in string A that is not present in string B. The goal is to efficiently process and find the most frequent word in string A while ignoring words that appear in string B. The solution leverages multiple algorithms to achieve this functionality.
 
 Project Breakdown:
