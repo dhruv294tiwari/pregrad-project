@@ -16,24 +16,24 @@ string cleanWord(string word) {
     return cleaned;
 }
 
-// Function to find the most frequent word in A that is not in B
+// Function to find the most frequent word that is not present in string B
 string findMostFrequentWord(string A, string B) {
     unordered_map<string, int> freqMap;
     unordered_map<string, bool> wordInB;
 
-    // Process words in B and store them in hash map
+    // Convert string B to a set of words for fast lookup
     stringstream ssB(B);
     string wordB;
     while (ssB >> wordB) {
-        wordB = cleanWord(wordB); // Normalize
+        wordB = cleanWord(wordB);
         if (!wordB.empty()) wordInB[wordB] = true;
     }
 
-    // Count frequency of words in A
+    // Count frequency of words in string A
     stringstream ssA(A);
     string wordA;
     while (ssA >> wordA) {
-        wordA = cleanWord(wordA); // Normalize
+        wordA = cleanWord(wordA);
         if (!wordA.empty() && wordInB.find(wordA) == wordInB.end()) {
             freqMap[wordA]++;
         }
